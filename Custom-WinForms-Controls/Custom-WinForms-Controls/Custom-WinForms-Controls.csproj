@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B62F678E-6EFD-4F5F-B2AB-C003CF20BB1A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Custom_WinForms_Controls</RootNamespace>
+    <RootNamespace>CustomWinFormsControls</RootNamespace>
     <AssemblyName>Custom-WinForms-Controls</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BringToFrontButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NoFocusCuesButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
