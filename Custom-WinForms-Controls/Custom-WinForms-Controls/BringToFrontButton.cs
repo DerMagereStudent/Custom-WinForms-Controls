@@ -6,6 +6,7 @@ namespace CustomWinFormsControls {
 	/// <summary>
 	/// Button which brings a given target control to front when the button was clicked.
 	/// </summary>
+	[ToolboxItem(true)]
 	public class BringToFrontButton : NoFocusCuesButton {
 		/// <summary>
 		/// The target control which should be brought to front.

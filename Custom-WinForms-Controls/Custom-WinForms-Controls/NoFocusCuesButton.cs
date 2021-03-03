@@ -1,9 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace CustomWinFormsControls {
 	/// <summary>
 	/// Modified button which has no focus rectangles when the form which contains this button loses focus while the button was focused.
 	/// </summary>
+	[ToolboxItem(true)]
 	public class NoFocusCuesButton : Button {
 		protected override bool ShowFocusCues => false;
 
