@@ -10,7 +10,7 @@ namespace CustomWinFormsControls {
 		/// <summary>
 		/// Creates a new instance of a <see cref="NoFocusCueButton"/>
 		/// </summary>
-		public NoFocusCueButton() { }
+		public NoFocusCuesButton() { }
 
 		public override void NotifyDefault(bool value) {
 			base.NotifyDefault(false);

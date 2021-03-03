@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorderlessResizableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BringToFrontButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormDragControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NoFocusCuesButton.cs">
