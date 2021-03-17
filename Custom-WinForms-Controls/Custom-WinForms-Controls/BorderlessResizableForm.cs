@@ -180,6 +180,8 @@ namespace CustomWinFormsControls {
 		public const int HTBOTTOMRIGHT = 0x00000011;
 		public const int HTTRANSPARENT = -1;
 
+		public static List<Type> TypeBlacklist { get; set; } = new List<Type>();
+
 		private Control parent;
 
 		public int BorderThinckness { get; set; }
@@ -196,7 +198,12 @@ namespace CustomWinFormsControls {
 		/// <param name="borderThinckness">The resize border thickness of the parent.</param>
 		public BorderWndProcFilter(Control parent, Control child, int borderThinckness) {
 			this.parent = parent;
-			this.AssignHandle(child.Handle);
+
+			try {
+				if (!BorderWndProcFilter.TypeBlacklist.Contains(child.GetType()))
+					this.AssignHandle(child.Handle);
+			} catch (Exception) { }
+
 			this.BorderThinckness = borderThinckness;
 
 			this.ResizeBorderLeft = true;

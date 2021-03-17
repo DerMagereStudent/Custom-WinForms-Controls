@@ -48,9 +48,13 @@
     <Compile Include="BringToFrontButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DirectoryTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormDragControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Scrollables\IScrollable.cs" />
     <Compile Include="NoFocusCuesButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -58,10 +62,47 @@
     <Compile Include="ResizablePanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Scrollables\IScrollBar.cs" />
+    <Compile Include="Scrollables\ScrollablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scrollables\ScrollBarH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scrollables\ScrollBarH.Designer.cs">
+      <DependentUpon>ScrollBarH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scrollables\ScrollBarV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scrollables\ScrollBarV.Designer.cs">
+      <DependentUpon>ScrollBarV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scrollables\ShowScrollBarOption.cs" />
+    <Compile Include="TypedEventHandler.cs" />
     <Compile Include="WindowsDefaultTitleBarButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scrollables\ScrollBarH.resx">
+      <DependentUpon>ScrollBarH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scrollables\ScrollBarV.resx">
+      <DependentUpon>ScrollBarV.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

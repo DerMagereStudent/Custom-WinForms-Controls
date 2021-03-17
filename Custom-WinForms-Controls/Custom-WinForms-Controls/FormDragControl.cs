@@ -50,7 +50,9 @@ namespace CustomWinFormsControls {
 
 		protected virtual void TargetMouseDown(object sender, MouseEventArgs e) {
 			this.drag = true;
-			this.MouseDownPosition = new Point(e.X, e.Y);
+			Form form = this.Target.FindForm();
+
+			this.MouseDownPosition = form is null ? new Point(e.X, e.Y) : form.PointToClient(this.Target.PointToScreen(new Point(e.X, e.Y)));
 		}
 
 		protected virtual void TargetMouseMove(object sender, MouseEventArgs e) {
